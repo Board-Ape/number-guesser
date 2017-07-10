@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" type="text/css" href="guesser2.css"/>
+</head>
+
+<body>
+  <div class="container">
+  <header>
+    <span class="red"></span>
+    <span class="yellow"></span>
+    <span class="green"></span>
+  </header>
+
+  <div class="top-title">
+    <p class="numb-text">Number</p>
+    <p class="guess-text">Guesser</p>
+  </div>
+  <div class="form">
+    <input type="text" id="guess-field" class="guess-field" placeholder="Enter your guess">
+    <input type="number" class="new-min" placeholder="Enter Minimum" value="1">
+    <input type="number" class="new-max" placeholder="Enter Max" value="100">
+    <button class="save">Save</button>
+    <button class="guess-submit">Guess</button>
+    <button disabled="true" class="clear-button">Clear</button>
+  </div>
+
+  <div class="results">
+    <p id = "your-last-guess">Let's play a game!</p>
+    <p id = "box-results">?</p>
+    <p id = "hi-or-low">Try to guess my number!</p>
+  </div>
+
+  <footer>
+    <button class="reset">Reset</button>
+  </footer>
+ </div>
+</body>
+
+<script src="guesser2.js"></script>
+
+</html>

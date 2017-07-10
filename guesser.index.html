@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Number Guesser</title>
+    <link rel="stylesheet" type="text/css" href="guesser.index.css" />
+  </head>
+
+  <div class="container">
+    <header>
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+    </header>
+
+    <section class="title_number">
+      <p class="numb">Number</p>
+      <p class="guess">Guesser</p>
+    </section>
+
+    <body>
+
+      <form class="guessing">
+         <input type="text" id="guessField" class="guessField" value="Enter your guess"><br />
+         <input type="submit" value="Guess" class="guessSubmit">
+         <input type="reset" value="Clear" class:"clearButton" >
+      </form>
+
+      <section class="bottom_third">
+        <p class="guesses"></p>
+        <p class="lastResult"></p>
+        <p class="lowOrHi"></p>
+        <button type="button">Reset</button>
+      </section.
+
+    </body>
+
+  </div>
+
+  <script>
+    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var guesses = document.querySelector(".guesses");
+    var lastResult = document.querySelector(".lastResult");
+    var lowOrHi = document.querySelector(".lowOrHi");
+    var guessSubmit = document.querySelector('.guessSubmit');
+    var guessField = document.querySelector('.guessField');
+    var guessCount = 1;
+    var resetButton;
+
+    function checkGuess() {
+      var userGuess = Number(guessField.value);
+      if (guessCount === 1) {
+        guesses.textContent = "Previous guesses: ";
+      }
+
+      guesses.textContent += userGuess + " ";
+
+      if (userGuess === randomNumber) {
+        lastResult.textContent = "Congratulations! You got it right!";
+      }
+    }
+
+  </script>
+
+</html>
